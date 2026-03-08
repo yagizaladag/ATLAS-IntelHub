@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Asset {
+  id          String   @id @default(cuid())
+  name        String
+  type        String   // drone, node, mobile_unit, static_relay
+  status      String   // active, offline, warning
+  latitude    Float
+  longitude   Float
+  lastSeen    DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("assets")
+}
+
+model Event {
+  id        String   @id @default(cuid())
+  timestamp DateTime @default(now())
+  type      String   // signal, log, alert, system
+  severity  String   // low, medium, high, critical
+  message   String
+  source    String?
+  createdAt DateTime @default(now())
+
+  @@map("events")
+}
+
+model OSINTQuery {
+  id        String   @id @default(cuid())
+  type      String   // ip_geolocation, whois, dns, reverse_dns
+  query     String
+  result    String?  // Store the result as JSON string
+  success   Boolean  @default(false)
+  error     String?
+  createdAt DateTime @default(now())
+
+  @@map("osint_queries")
+}

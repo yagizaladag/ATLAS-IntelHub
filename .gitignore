@@ -1,0 +1,386 @@
+# ATLAS CYBER INTELLIGENCE - Git Ignore File
+
+# Security - Never commit sensitive data
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+*.key
+*.pem
+*.p12
+*.crt
+*.pfx
+*.p7b
+*.der
+*.csr
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+# Comment in the public line in if your project uses Gatsby and not Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# vuepress build output
+.vuepress/dist
+
+# vuepress v2.x temp and cache directory
+.temp
+.cache
+
+# Docusaurus cache and generated files
+.docusaurus
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# yarn v2
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# IDE - VS Code
+.vscode/
+*.code-workspace
+
+# IDE - JetBrains
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+
+# IDE - NetBeans
+nbproject/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# IDE - Vim
+*.swp
+*.swo
+*~
+
+# IDE - Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# OS - Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# OS - macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# OS - Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Project specific
+# Keep only secure versions
+index.html
+index-simple.html
+test.html
+
+# Sensitive data exports
+*.json.export
+*.json.secure
+atlas-intel-*.json
+
+# Temporary files
+temp/
+tmp/
+.tmp/
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Build artifacts
+build/
+dist/
+out/
+target/
+
+# Package files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Security scanning results
+security-scan*
+vulnerability-report*
+audit-report*
+
+# Performance reports
+performance-report*
+benchmark-report*
+
+# User data
+user-data/
+local-data/
+cache-data/
+
+# Configuration files with secrets
+config/secrets.js
+config/private.js
+config/production.js
+
+# SSL certificates
+ssl/
+certs/
+certificates/
+
+# Keys and tokens
+keys/
+tokens/
+secrets/
+
+# Backup and archives
+backups/
+archives/
+
+# Test data
+test-data/
+mock-data/
+
+# Documentation builds
+docs/build/
+docs/_build/
+
+# Static assets that might be processed
+assets/processed/
+static/processed/
+
+# Generated files
+generated/
+auto-generated/
+
+# Lock files (keep package-lock.json but ignore others)
+yarn.lock
+pnpm-lock.yaml
+
+# Husky
+.husky/_
+
+# lint-staged
+.lintstagedrc
+
+# Prettier
+.prettierignore
+
+# TypeScript
+*.tsbuildinfo
+
+# Testing
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+
+# Storybook
+storybook-static/
+
+# Temporary deployment files
+.deploy/
+.vercel/
+
+# Local development
+.local/
+.localdev/
+
+# Environment specific
+.env.development
+.env.staging
+.env.production
+
+# API keys and secrets (additional patterns)
+api-keys.txt
+secrets.txt
+private-keys.txt
+credentials.txt
+
+# Log files (additional patterns)
+access.log
+error.log
+debug.log
+trace.log
+system.log
+
+# Cache directories (additional patterns)
+.cache/
+.parcel-cache/
+.vite/
+.eslintcache
+
+# Build outputs (additional patterns)
+lib/
+target/
+bin/
+
+# IDE and editor files (additional patterns)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+
+# System files (additional patterns)
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Temporary files (additional patterns)
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Keep only the secure HTML file
+!atlas-osint-secure.html
+!README-SECURE.md

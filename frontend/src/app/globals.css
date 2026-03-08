@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body {
+  background-color: #050a0a;
+  color: #0df2f2;
+  overflow: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* CRT/Scanline Effect Overlay */
+.scanline-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* Grid Overlay */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(13, 242, 242, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 242, 242, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.fisheye-container {
+  mask-image: radial-gradient(circle, black 60%, transparent 95%);
+  transform: perspective(1000px) rotateX(5deg);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a1414;
+}
+::-webkit-scrollbar-thumb {
+  background: #0df2f2;
+  border-radius: 4px;
+}
