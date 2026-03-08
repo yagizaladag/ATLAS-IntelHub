@@ -1,4 +1,4 @@
-![shared/img_1.png](shared/img_1.png)
+![ATLAS Dashboard](https://raw.githubusercontent.com/yagizaladag/ATLAS-IntelHub/main/shared/img_1.png)
 
 # ATLAS OSINT Operations Console
 ![ATLAS Dashboard](shared/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-03-08%20224324.png)
