@@ -1,15 +1,88 @@
 # ATLAS OSINT Operations Console
 
-A professional tactical intelligence console for OSINT operations, built with Next.js, TypeScript, and Node.js.
+![ATLAS Dashboard](shared/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-03-08%20224324.png)
 
-## 🚀 Features
+# � **UNDER CONSTRUCTION** 🚧
 
-- **Interactive World Map**: Real-time asset tracking with Mapbox GL JS
-- **OSINT Tools**: IP geolocation, WHOIS lookup, DNS queries
-- **Live Event Feed**: Real-time event streaming via WebSockets
-- **Asset Tracking**: Monitor drones, nodes, and mobile units
-- **Tactical UI**: Dark theme with cyberpunk aesthetics
-- **Modular Architecture**: Clean separation of concerns
+**Status**: Development in Progress  
+**Completion**: ~85%  
+**ETA**: Q2 2026
+
+---
+
+## 📋 **Current Implementation Status**
+
+### ✅ **Completed Features**
+- **Backend API Server**: Express.js with TypeScript
+- **Database Schema**: Prisma ORM with SQLite
+- **Frontend Framework**: Next.js 14 with TypeScript
+- **UI Components**: Tactical interface design
+- **OSINT Service Structure**: IP lookup, WHOIS, DNS services
+- **WebSocket Infrastructure**: Real-time communication
+- **Security Documentation**: Comprehensive security measures
+
+### 🚧 **In Development**
+- **Map Integration**: WebGL/Mapbox implementation
+- **Real-time Data Flow**: Frontend-backend synchronization
+- **Authentication System**: User management
+- **Advanced OSINT Tools**: Enhanced intelligence gathering
+- **Performance Optimization**: Production readiness
+
+### ⚠️ **Known Issues**
+- **WebGL Compatibility**: Browser compatibility issues
+- **Map Rendering**: Mapbox integration needs refinement
+- **Real-time Updates**: WebSocket connection stability
+- **Environment Configuration**: Production setup needed
+
+---
+
+## � **What We've Accomplished**
+
+### 🏗️ **Architecture**
+- **Microservices Design**: Modular backend structure
+- **Type Safety**: Full TypeScript implementation
+- **Database Design**: Optimized schema for OSINT data
+- **Security Framework**: Multi-layer protection system
+- **API Documentation**: RESTful endpoints
+
+### 🎨 **User Interface**
+- **Tactical Design**: Cyberpunk-inspired dark theme
+- **Responsive Layout**: Multi-device compatibility
+- **Component System**: Reusable React components
+- **State Management**: Zustand for global state
+- **Styling Framework**: TailwindCSS integration
+
+### 🔧 **Technical Implementation**
+- **Frontend**: Next.js 14, React 18, TypeScript
+- **Backend**: Node.js, Express, TypeScript
+- **Database**: SQLite with Prisma ORM
+- **Real-time**: Socket.io WebSocket implementation
+- **Security**: Content Security Policy, anti-debugging
+
+---
+
+## 🚀 **Future Roadmap**
+
+### Phase 1: Core Functionality (Current)
+- [x] Basic UI framework
+- [x] Backend API structure
+- [x] Database schema
+- [ ] Map integration
+- [ ] Real-time data flow
+
+### Phase 2: Advanced Features
+- [ ] User authentication
+- [ ] Advanced OSINT tools
+- [ ] Data visualization
+- [ ] Performance optimization
+
+### Phase 3: Production Ready
+- [ ] Security hardening
+- [ ] Load testing
+- [ ] Documentation
+- [ ] Deployment
+
+---
 
 ## 🛠 Tech Stack
 
@@ -17,7 +90,7 @@ A professional tactical intelligence console for OSINT operations, built with Ne
 - **Next.js 14** - React framework with App Router
 - **TypeScript** - Type safety
 - **TailwindCSS** - Utility-first styling
-- **Mapbox GL JS** - Interactive maps
+- **Mapbox GL JS** - Interactive maps (in progress)
 - **Zustand** - State management
 - **Socket.io Client** - Real-time communication
 
@@ -29,7 +102,9 @@ A professional tactical intelligence console for OSINT operations, built with Ne
 - **Prisma** - Database ORM
 - **SQLite** - Database
 
-## 📦 Installation
+---
+
+## 📦 Installation (Development)
 
 ### Prerequisites
 - Node.js 18+ 
@@ -37,223 +112,52 @@ A professional tactical intelligence console for OSINT operations, built with Ne
 
 ### Setup
 
-1. **Clone the repository**
+1. **Clone repository**
 ```bash
-git clone <repository-url>
-cd ATLAS
+git clone https://github.com/yagizaladag/ATLAS-IntelHub.git
+cd ATLAS-IntelHub
 ```
 
 2. **Install dependencies**
-
-Frontend:
 ```bash
-cd frontend
-npm install
+npm run install:all
 ```
 
-Backend:
+3. **Setup database**
 ```bash
-cd backend
-npm install
+cd backend && npx prisma generate && npx prisma db push
 ```
 
-3. **Configure environment variables**
-
-Copy the example files:
+4. **Start development servers**
 ```bash
-# Frontend
-cp frontend/.env.example frontend/.env
-
-# Backend  
-cp backend/.env.example backend/.env
-```
-
-Edit the files and add your API keys:
-- `NEXT_PUBLIC_MAPBOX_TOKEN` - Get from [Mapbox](https://account.mapbox.com/access-tokens/)
-- Optional: Add API keys for enhanced OSINT services
-
-4. **Setup database**
-```bash
-cd backend
-npx prisma generate
-npx prisma db push
-```
-
-## 🎮 Running the Application
-
-### Development Mode
-
-Start both servers:
-
-```bash
-# Terminal 1 - Backend
-cd backend
-npm run dev
-
-# Terminal 2 - Frontend  
-cd frontend
 npm run dev
 ```
 
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
-- API Health: http://localhost:3001/health
+**Note**: This is a development version. Some features may not be fully functional.
 
-### Production Mode
+---
 
-```bash
-# Backend
-cd backend
-npm run build
-npm start
+## 🤝 **Contributing**
 
-# Frontend
-cd frontend
-npm run build
-npm start
-```
+**Currently accepting contributions for:**
+- Map integration improvements
+- WebSocket stability
+- Performance optimization
+- Security enhancements
+- Documentation
 
-## 📡 API Endpoints
+---
 
-### OSINT Tools
-
-- `GET /api/osint/ip-lookup?ip=<ip_address>` - IP geolocation
-- `GET /api/osint/whois?domain=<domain>` - WHOIS lookup
-- `GET /api/osint/dns?domain=<domain>&type=<record_type>` - DNS lookup
-- `GET /api/osint/reverse-dns?ip=<ip_address>` - Reverse DNS
-
-### WebSocket Events
-
-Connect to `ws://localhost:3001` to receive real-time events:
-```javascript
-socket.on('event', (event) => {
-  console.log('New event:', event);
-});
-```
-
-## 🎨 UI Components
-
-### Main Layout
-- **Header**: System status, clock, coordinates
-- **Left Panel**: OSINT tools and radar widget
-- **Center**: Interactive map with HUD overlay
-- **Right Panel**: Live event feed and asset tracker
-- **Footer**: System metrics
-
-### Features
-- **Real-time coordinates** tracking on mouse movement
-- **Live clock** with UTC timestamp
-- **Animated radar** widget
-- **Scrolling event feed** with severity levels
-- **Interactive map** with custom markers
-- **Tactical animations** and scanline effects
-
-## 🔧 Configuration
-
-### Mapbox Setup
-1. Create a free Mapbox account
-2. Generate an access token
-3. Add it to `frontend/.env` as `NEXT_PUBLIC_MAPBOX_TOKEN`
-
-### OSINT Services
-The application includes mock OSINT services for demonstration. For production:
-1. Add API keys to `backend/.env`
-2. Update service implementations in `backend/src/services/`
-
-### Database
-The application uses SQLite by default. To switch databases:
-1. Update `DATABASE_URL` in `backend/.env`
-2. Update `provider` in `backend/prisma/schema.prisma`
-3. Run `npx prisma db push`
-
-## 🚦 Development
-
-### Project Structure
-```
-ATLAS/
-├── frontend/          # Next.js application
-│   ├── src/
-│   │   ├── app/       # App Router pages
-│   │   ├── components/ # React components
-│   │   ├── store/     # Zustand state management
-│   │   └── styles/    # Global styles
-│   └── package.json
-├── backend/           # Node.js API server
-│   ├── src/
-│   │   ├── controllers/ # Request handlers
-│   │   ├── services/    # Business logic
-│   │   ├── routes/      # API routes
-│   │   └── events/      # WebSocket handling
-│   ├── prisma/         # Database schema
-│   └── package.json
-└── shared/            # Shared TypeScript types
-    └── types.ts
-```
-
-### Scripts
-
-Frontend:
-- `npm run dev` - Development server
-- `npm run build` - Production build
-- `npm run start` - Production server
-- `npm run lint` - ESLint
-
-Backend:
-- `npm run dev` - Development with nodemon
-- `npm run build` - TypeScript compilation
-- `npm run start` - Production server
-- `npm run lint` - ESLint
-
-## 🎯 Usage
-
-1. **Launch the application** following the installation steps
-2. **Explore the map** - Click and drag to navigate, scroll to zoom
-3. **Use OSINT tools** - Enter IPs or domains in the left panel
-4. **Monitor events** - Watch the live feed for real-time updates
-5. **Track assets** - View asset status in the right panel
-
-## 🔐 Security Notes
-
-- API keys should never be committed to version control
-- Use environment variables for all sensitive configuration
-- Enable CORS only for trusted origins in production
-- Consider adding authentication for production deployments
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
+## 📄 **License**
 
 This project is for educational and demonstration purposes only.
 
-## 🆘 Troubleshooting
+---
 
-### Common Issues
+## 🔗 **Repository**
 
-**Map not loading:**
-- Check your Mapbox token in `.env`
-- Ensure the token has the correct permissions
+**Exclusive home**: https://github.com/yagizaladag/ATLAS-IntelHub
 
-**Backend connection errors:**
-- Verify backend is running on port 3001
-- Check CORS settings in backend
+---
 
-**OSINT tools not working:**
-- Some services use mock data for demonstration
-- Add real API keys for production use
-
-**Database errors:**
-- Run `npx prisma generate` after schema changes
-- Ensure `DATABASE_URL` is correctly configured
-
-### Getting Help
-
-- Check the console for error messages
-- Verify all environment variables are set
-- Ensure both frontend and backend are running
+*🚧 **Under Construction** - Building the future of OSINT operations*
