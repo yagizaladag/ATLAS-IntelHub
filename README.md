@@ -1,3 +1,4 @@
+![ATLAS Dashboard](shared/img_1.png)
 # ATLAS OSINT Operations Console
 ![ATLAS Dashboard](shared/Ekran%20g%C3%B6r%C3%BCnt%C3%BCs%C3%BC%202026-03-08%20224324.png)
 # 🚧 **UNDER CONSTRUCTION** 🚧
